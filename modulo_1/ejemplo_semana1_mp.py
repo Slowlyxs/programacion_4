@@ -1,0 +1,1 @@
+print("Este es un ejemplo acerca de reservas de citas médicas")
