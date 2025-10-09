@@ -18,11 +18,11 @@ fun main() {
     println(altura)
 
     println("Tipo Float")
-    val peso: Float = 64.6k
+    val peso: Float = 64.6f
     println(peso)
 
     println("Tipo Long")
-    val poblacion: Long = 2_000_000_00L
+    val poblacion: Long = 2_000_000_000L
     println(poblacion)
 
     println("Tipo de texto")
@@ -51,33 +51,32 @@ fun main() {
 
     println("Operacion de aserción no null")
     val longitudSegura = apellido!!.length
+    println(longitudSegura)
 
     println("Interpretacion de Strings")
     val nombre_paciente: String = "Alejandro"
     val edad_paciente: Int = 21
     val Tipode_sangre: String = "O+"
 
-    println("${nombre_paciente.uppercase()}tiene la edad de ${edad_paciente}" con tipo de tipo de sangre ${Tipode_sangre})
-    println("En 2 años tendra: ${edad_paciente+5} anios")
+    // CORREGIDO: faltaban comillas y concatenación para imprimir correctamente
+    println("${nombre_paciente.uppercase()} tiene la edad de ${edad_paciente} con tipo de sangre ${Tipode_sangre}")
+    println("En 2 años tendrá: ${edad_paciente + 2} años")  // Corregí el cálculo a +2 y 'años' bien escrito
 
     println("String Multilinea")
     val mensaje_confirmacion = """
-        Querido $nombre
+        Querido $nombre_paciente
         Te esperamos en la cita
-        de la especialidad medica de 
-        $especialidad, llega con antelacion
-    """
+        de la especialidad médica de 
+        $especialidad, llega con anticipación
+    """.trimIndent()
     println(mensaje_confirmacion)
 
     println("Conversiones")
     val textoEdad: String = "21"
-    val edadConverida: Int = textoEdad.toInt()
-    println(edadConverida)
+    val edadConvertida: Int = textoEdad.toInt()
+    println(edadConvertida)
 
     val numero: Double = 50.8
     val numeroConvertido: String = numero.toString()
     println(numeroConvertido)
-
-    
-
 }

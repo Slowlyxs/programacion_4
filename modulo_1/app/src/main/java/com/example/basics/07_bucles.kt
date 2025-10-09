@@ -2,24 +2,28 @@ package com.example.kotlin
 
 fun main() {
     println("Bucles")
+
     val jedis = listOf("Luke", "Leia", "Obi-Wan", "Yoda", "Ahsoka")
+
+    // Recorriendo con índice
     for ((index, jedi) in jedis.withIndex()) {
-        println("${index + 1}. ${jedi}")
+        println("${index + 1}. $jedi")
     }
-    //rango ascendentes
+
+    // Rango ascendente
     for (i in 0..20 step 2) {
-        println("Energia: $i%")
+        println("Energía: $i%")
     }
-    //rango descendentes
+
+    // Rango descendente
     for (countdown in 10 downTo 1) {
         println("Despegue en: $countdown")
     }
-    //control de flujo
-    for (jedi in jedis){
-        if( jedi == "Obi-Wan") continues
-        if( jedi == "Yoda") break
-        println("Entrenado a ${jedi}")
+
+    // Control de flujo dentro del bucle
+    for (jedi in jedis) {
+        if (jedi == "Obi-Wan") continue
+        if (jedi == "Yoda") break
+        println("Entrenando a $jedi")
     }
-
-
 }
